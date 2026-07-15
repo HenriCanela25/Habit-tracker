@@ -1,0 +1,39 @@
+
+.modal{
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    left: 0;
+    position: fixed;
+    background: rgba(49,49,49,0.8);
+    justify-items: center;
+}
+
+.modal-content{
+    position: absolute;
+    background-color: #18181a;
+    width: 30%;
+    height: 70%;
+    top: 10%;
+    padding: 30px;
+}
+
+.closeBtn{
+    background: none;
+    border: 0px;
+    cursor: pointer;
+    color: #525554;
+    font-size: 26px;
+}
+
+.modalHeader{
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerTitle{
+    font-size: 24px;
+    font-weight: 600;
+}

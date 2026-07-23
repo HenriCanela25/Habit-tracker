@@ -7,15 +7,16 @@
     right: 0;
     left: 0;
     position: fixed;
-    background: rgba(49,49,49,0.8);
+    background: rgba(0,0,0,0.6);
     justify-items: center;
 }
 
 .modal-content{
     position: absolute;
     background-color: #18181a;
-    width: 30%;
-    height: 70%;
+    border-radius: 20px;
+    border: 1px solid #27272a;
+    width: 26%;
     top: 10%;
     padding: 30px;
 }
@@ -31,9 +32,25 @@
 .modalHeader{
     display: flex;
     justify-content: space-between;
+    padding-bottom: 40px;
 }
 
 .headerTitle{
     font-size: 24px;
     font-weight: 600;
+}
+
+.modalInputs form{
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.btn-group{
+    display: flex;
+    gap: 10px;
+}
+
+.btn-group button{
+    width: 50%;
 }

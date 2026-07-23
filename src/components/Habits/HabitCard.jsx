@@ -8,7 +8,7 @@ const HabitCard = ({ item }) => {
     return (
         <div className="card">
             <div className="cardHeader">
-                <div className="cardColor"></div>
+                <div className="cardColor" style={{backgroundColor: item.color}}></div>
                 <div className={`cardStreak ${item.id === 1 ? 'streakActive' : ''}`}>
                     <FontAwesomeIcon icon={faFire} />
                     <span>0</span>

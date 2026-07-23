@@ -1,0 +1,36 @@
+
+.monthly{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.monthly label{
+    color: #656867;
+    font-size: 14px;     
+}
+
+.monthly-controller{
+    display: flex;
+    gap: 10px;
+}
+
+.monthly-controller button{
+    background-color: #111113;
+    color: white;
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+    border: 1px solid #65686798;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.monthly-controller span{
+    align-content: center;
+}
+
+.monthTitle{
+    color: #656867;
+    font-size: 14px;
+}

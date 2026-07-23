@@ -1,0 +1,32 @@
+
+.frequency{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.frequency label{
+    color: #656867;
+    font-size: 14px;    
+}
+
+.frequency-buttons{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 12px;
+}
+
+.frequencyBtn{
+    padding: 6px;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #7e8381;
+    border: 1px solid #2b2c2b;
+    cursor: pointer;
+    height: 40px;
+}
+
+.freq-selected{
+    color: #0b0b0c;
+    background-color: #e8935f;
+}

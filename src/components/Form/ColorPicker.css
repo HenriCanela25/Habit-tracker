@@ -1,0 +1,22 @@
+.color-picker{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.color-picker span{
+    color: #656867;
+    font-size: 14px;
+}
+
+.colors{
+    display: flex;
+    gap: 12px;
+}
+
+.colors button{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}

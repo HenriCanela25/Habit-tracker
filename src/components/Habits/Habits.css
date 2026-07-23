@@ -17,3 +17,8 @@
     display: flex;
     justify-content: space-between;
 }
+
+.alert-section{
+    position: absolute;
+    right: 50px;
+}

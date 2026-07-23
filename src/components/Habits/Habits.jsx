@@ -1,94 +1,32 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import HabitCard from './HabitCard';
 import Button from '../Button/Button';
 import AddHabit from './AddHabit';
+import Alert from '../Alert/Alert';
+import { HabitContext } from '../../context/HabitContext';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import './Habits.css';
 
 const Habits = () => {
 
-    const [habits] = useState([
-        {id: 1, 
-         title: "Do exercise", 
-         description: "Every morning from Monday to Saturday",
-         frequency: "Specific days",
-         frequencyConfig: {
-            interval: 0,
-            daysOfWeek: [1, 2, 3, 4, 5, 6],
-            dayOfMonth: 0
-         },
-         habitStatus: "active",
-         addDate: "13/07/2026",
-         modifyDate: "13/07/2026"
-        },
-        {id: 2, 
-         title: "Learn React", 
-         description: "Every day if I can",
-         frequency: "Daily",
-         frequencyConfig: {
-            interval: 0,
-            daysOfWeek: [],
-            dayOfMonth: 0
-         },
-         habitStatus: "active",
-         addDate: "13/07/2026",
-         modifyDate: "13/07/2026"
-        },
-        {id: 3, 
-         title: "Learn React", 
-         description: "Every day if I can",
-         frequency: "Daily",
-         frequencyConfig: {
-            interval: 0,
-            daysOfWeek: [],
-            dayOfMonth: 0
-         },
-         habitStatus: "active",
-         addDate: "13/07/2026",
-         modifyDate: "13/07/2026"
-        },
-        {id: 4, 
-         title: "Learn React", 
-         description: "Every day if I can",
-         frequency: "Daily",
-         frequencyConfig: {
-            interval: 0,
-            daysOfWeek: [],
-            dayOfMonth: 0
-         },
-         habitStatus: "active",
-         addDate: "13/07/2026",
-         modifyDate: "13/07/2026"
-        },
-        {id: 5, 
-         title: "Learn React", 
-         description: "Every day if I can",
-         frequency: "Daily",
-         frequencyConfig: {
-            interval: 0,
-            daysOfWeek: [],
-            dayOfMonth: 0
-         },
-         habitStatus: "active",
-         addDate: "13/07/2026",
-         modifyDate: "13/07/2026"
-        },
-        {id: 6, 
-         title: "Learn React", 
-         description: "Every day if I can",
-         frequency: "Daily",
-         frequencyConfig: {
-            interval: 0,
-            daysOfWeek: [],
-            dayOfMonth: 0
-         },
-         habitStatus: "active",
-         addDate: "13/07/2026",
-         modifyDate: "13/07/2026"
-        }                  
-    ]);
+    const { habits } = useContext(HabitContext);
 
     const [modal, setModal] = useState(false);
+    const [showAlert, setShowAlert] = useState(false);
+    const [alertType, setAlertType] = useState('');
+    const [alertMessage, setAlertMessage] = useState('');
+
+    const generateAlert = (type, message) => {
+
+        setAlertType(type);
+        setAlertMessage(message);
+        setShowAlert(true);
+
+        setTimeout(() => {
+            setShowAlert(false);
+        }, 3500);
+        
+    }
 
     const toggleModal = () => {
         setModal(!modal);
@@ -104,7 +42,10 @@ const Habits = () => {
                 <div className="habits">
                     {habits.map(habit => <HabitCard key={habit.id} item={habit} />)}
                 </div>
-                {modal && <AddHabit closeModal={toggleModal} />}
+                {modal && <AddHabit closeModal={toggleModal} generateAlert={generateAlert} />}
+                <div className="alert-section">
+                    { showAlert && <Alert showAlert={showAlert} setShowAlert={setShowAlert} alertType={alertType} alertMessage={alertMessage} /> }
+                </div>
             </div>
         </>
     )

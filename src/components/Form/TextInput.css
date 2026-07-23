@@ -1,0 +1,39 @@
+
+.textInput{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.textInput label{
+    color: #656867;
+    font-size: 14px;
+}
+
+.textInput input{
+    background-color: #111113;
+    height: 40px;
+    border: 1px solid #27272a;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    padding: 0px 10px 0px 10px;
+}
+
+.textInput input::placeholder{
+    color: #819593;
+}
+
+.textInput input:focus{
+    outline: none;
+}
+
+.optionalText{
+    font-size: 12px;
+    color: #656867;
+}
+
+.errorMessage{
+    color: #df0000;
+    font-size: 12px;
+}

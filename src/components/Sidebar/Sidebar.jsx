@@ -12,7 +12,10 @@ const Sidebar = () => {
         <>
         <div id="sideBar">
             <nav>
-                <h1 className="title"><FontAwesomeIcon icon={faFireFlameCurved} color='#e8935f' />Habits Tracker</h1>
+                <div className="title">
+                    <FontAwesomeIcon className='icon' icon={faFireFlameCurved} color='#e8935f' />
+                    <h1>Habits Tracker</h1>
+                </div>
                 <ul>
                     {items.map(item => {
                         return (
@@ -22,7 +25,7 @@ const Sidebar = () => {
                                 className={`navItem ${item.selected ? 'navItemSelected' : ''}`}
                             >
                                 <FontAwesomeIcon icon={item.icon} className="item-icon" />
-                                {item.title}
+                                <span className='sidebar-option'>{item.title}</span>
                             </li>
                         )
                     })}

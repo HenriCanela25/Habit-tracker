@@ -1,7 +1,6 @@
 
 .btn{
     font-size: 14px;
-    width: 120px;
     height: 34px;
     border-radius: 8px;
     background-color: #e8935f;
@@ -11,6 +10,10 @@
     align-items: center;
     gap: 4px;
     cursor: pointer;
+}
+
+.newHabitBtn{
+    padding: 20px;
 }
 
 .btn:hover{

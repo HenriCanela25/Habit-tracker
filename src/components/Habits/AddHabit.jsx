@@ -95,7 +95,7 @@ const AddHabit = ({ closeModal, generateAlert }) => {
                         <ColorPicker colorList={colorList} color={color} setColor={setColor} />
                         <div className="btn-group">
                             <CancelButton text='Cancel' handleClick={closeModal} />
-                            <Button text='Create habit' />  
+                            <Button text='Create habit' type='create' />  
                         </div>                
                     </form>
                 </div>

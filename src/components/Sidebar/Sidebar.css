@@ -4,7 +4,6 @@
     background-color: #0b0b0c;
     height: 100%;
     flex-shrink: 0;
-    width: 320px;
     border-right: 1px solid #2b2b2e;
 }
 
@@ -16,6 +15,11 @@ nav{
     display: flex;
     gap: 10px;
     padding-bottom: 30px;
+    font-size: 16px;
+}
+
+.title .icon{
+    font-size: 30px;
 }
 
 nav ul{
@@ -28,7 +32,6 @@ nav ul{
 }
 
 .navItem{
-    width: 264px;
     height: 44px;
     display: flex;
     align-items: center;
@@ -54,4 +57,23 @@ nav ul{
 
 .navItemSelected .item-icon{
     color: #e8935f;
+}
+
+
+/* Responsive */
+
+@media (width <= 915px) {
+    .title h1 {
+        display: none;
+    }
+
+    .sidebar-option{
+        display: none;
+    }
+
+    .navItem{
+        padding-left: 0px;
+        justify-content: center;
+        align-items: center;
+    }
 }

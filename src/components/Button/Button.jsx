@@ -1,15 +1,15 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Button.css';
 
-const Button = ({ text, icon, handleClick }) => {
+const Button = ({ text, icon, handleClick, type }) => {
 
     return (
         <button 
-        className='btn'
+        className={type === 'create' ? 'btn' : 'btn newHabitBtn'}
         onClick={ handleClick }
         >
             <FontAwesomeIcon icon={icon} />
-            { text }
+            <span>{ text }</span>
         </button>
     )
 }
